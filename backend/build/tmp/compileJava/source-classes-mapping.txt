@@ -1,0 +1,4 @@
+com/udacity/gradle/builditbigger/backend/MyBean.java
+ com.udacity.gradle.builditbigger.backend.MyBean
+com/udacity/gradle/builditbigger/backend/MyEndpoint.java
+ com.udacity.gradle.builditbigger.backend.MyEndpoint
