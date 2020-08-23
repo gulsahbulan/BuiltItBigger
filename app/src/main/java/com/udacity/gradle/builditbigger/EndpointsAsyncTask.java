@@ -10,6 +10,8 @@ import com.udacity.gradle.builditbigger.backend.myApi.MyApi;
 
 import java.io.IOException;
 
+import timber.log.Timber;
+
 public class EndpointsAsyncTask extends AsyncTask<Void, Void, String> {
 
     private static MyApi myApiService = null;
@@ -47,7 +49,8 @@ public class EndpointsAsyncTask extends AsyncTask<Void, Void, String> {
         try {
             return myApiService.pullJokes().execute().getData();
         } catch (IOException e) {
-            return e.getMessage();
+            Timber.e("Failed to get jokes " + e.getMessage());
+            return null;
         }
     }
 
